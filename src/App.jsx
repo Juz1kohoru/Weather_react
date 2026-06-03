@@ -64,7 +64,6 @@ function App() {
              {error && <h2>{error}</h2>}
              {data && (
                <div>
-                 {console.log(data)}
                 <h4>Degree</h4>
                 <h3>{Math.floor(data.main.temp_max - 273.15)}C</h3>
                </div>
