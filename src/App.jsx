@@ -19,7 +19,7 @@ function App() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`,
     ).then((res) => {
       if(res.status === 404) {
-        setError("error not found")
+        setError("city is not found")
       } else {
         setError(null)
         return res.json().then((res) => setData(res))
